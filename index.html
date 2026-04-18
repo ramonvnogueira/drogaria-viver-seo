@@ -32,7 +32,7 @@
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","PublicHolidays"], "opens": "08:00", "closes": "14:00"}
   ],
   "areaServed": "Betim",
-  "priceRange": "$$",
+  "priceRange": "$",
   "sameAs": ["https://www.instagram.com/drogariaviveroficial/"]
 }
 </script>
@@ -273,6 +273,24 @@ footer a:hover{color:white;}
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Drogaria Viver Popular">
 <link rel="icon" href="/logo-viver-popular.jpg">
+<!-- Google Analytics 4 — Drogaria Viver Popular -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z402DBXC3P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z402DBXC3P');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1){
+      gtag('event', 'click_whatsapp', {link_url: href, page_path: location.pathname});
+    } else if(href.indexOf('tel:') === 0){
+      gtag('event', 'click_phone', {link_url: href, page_path: location.pathname});
+    }
+  });
+</script>
 </head>
 <body>
 
@@ -285,7 +303,7 @@ footer a:hover{color:white;}
 <main>
 
 <section class="hero">
-  <div class="hero-pill">💊 Farmácia em Betim desde sempre</div>
+  <div class="hero-pill">💊 Farmácia em Betim</div>
   <h1>Drogaria Viver <em>Popular</em></h1>
   <p class="hero-sub">Farmácia de referência em Betim com entrega rápida em toda a cidade. Medicamentos, genéricos, perfumaria e muito mais. Aberta todos os dias.</p>
   <div class="hero-rating">
