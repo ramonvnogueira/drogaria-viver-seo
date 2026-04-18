@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drogariaviverpopular.com.br/sitemap.xml
