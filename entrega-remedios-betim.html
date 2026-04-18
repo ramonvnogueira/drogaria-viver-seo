@@ -46,7 +46,7 @@
     "Brasiléia","Bueno Franco","Betim","Alta Villa","Alvorada","Amarante","Amoras","Aroeiras","Arquipélago Verde","Açude","Bela Vista","Bom Repouso","Cachoeira","Califórnia","Charneca","Chácara","Chácaras","Cidade Verde","Colônia Santa Isabel","Cruzeiro","Decamão","Flores e Florestas","Gentileza","Granja São João","Guarujá","Guarujá Mansões","Horto","Ingá","Itacolomi","Jardim Cidade","Jardim Nazareno","Jardim Perla","Jardim Petrópolis","Jardim Recreio Alvorada","Jardim Santa Cruz","Jardim das Alterosas 1ª Seção","Jardim das Alterosas 2ª Seção","Kennedy","Marajoara","Marmeleiros","Monte Castelo","Monte Verde","Morada do Trevo","Nossa Senhora de Fátima","Nossa Senhora do Carmo","Novo Guarujá","Palmeiras","Parque Fernão Dias","Parque Ipiranga","Pedreira","Pimentas","Pingo Dágua","Ponte Alta","Presidente Kennedy","Recanto Verde","Recreio dos Caiçaras","Residencial Montserrat","Residencial Taquaril","Riacho III","Riacho de Areia","Riviera","Salomé","Santa Fé","Santa Lúcia","Sidon","São Luiz","São Miguel","São Sebastião","Teixeirinha","Vale Verde","Vargem das Flores","Vila Alpina","Vila Amaral","Vila Boa Esperança","Vila Inconfidência","Vila Monte Líbano","Vila Recreio","Vila Tangará","Vila Triângulo","Várzea das Flores"
   ],
   "hasOfferCatalog": { "@type": "OfferCatalog", "name": "Tele Entrega de Medicamentos em Betim" },
-  "priceRange": "$$",
+  "priceRange": "$",
   "sameAs": ["https://www.instagram.com/drogariaviveroficial/"]
 }
 </script>
@@ -276,6 +276,24 @@ footer a:hover{color:white;}
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Drogaria Viver Popular">
 <link rel="icon" href="/logo-viver-popular.jpg">
+<!-- Google Analytics 4 — Drogaria Viver Popular -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z402DBXC3P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z402DBXC3P');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a');
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1){
+      gtag('event', 'click_whatsapp', {link_url: href, page_path: location.pathname});
+    } else if(href.indexOf('tel:') === 0){
+      gtag('event', 'click_phone', {link_url: href, page_path: location.pathname});
+    }
+  });
+</script>
 </head>
 <body>
 
